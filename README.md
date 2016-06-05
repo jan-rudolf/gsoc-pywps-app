@@ -1,0 +1,1 @@
+This is used as an application, that is connected with the Apache webserver and with installed PyWPS.
