@@ -14,7 +14,7 @@ class Dummy(Process):
             abstract='This is dummy process, nothing useful.',
             profile='',
             wsdl='',
-            metadata=['Wait', 'Delay'],
+            metadata=['Sleep', 'Wait', 'Delay'],
             inputs=inputs,
             outputs=outputs,
             store_supported=True,
