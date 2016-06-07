@@ -13,7 +13,7 @@ class Dummy(Process):
             title='Dummy Process',
             abstract='This is dummy process, nothing useful.',
             profile='',
-            wsdl='',
+            #wsdl='',
             metadata=['Sleep', 'Wait', 'Delay'],
             inputs=inputs,
             outputs=outputs,

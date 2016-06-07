@@ -9,14 +9,15 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../"
 
 
 from pywps.app import Service
+from pywps.server.app import main
 from pywps import configuration
 
 from processes.sleep import Sleep
 from processes.dummy import Dummy
 
 
-configuration.load_configuration(os.path.join(os.path.dirname(os.path.abspath(__file__)), "pywps.cfg"))
+configuration.load_configuration(os.path.join(os.path.dirname(os.path.abspath(__file__)), "pywps2.cfg"))
 
 processes = [Sleep(), Dummy()]
 
-application = Service(processes=processes)
+application = main.app #Service(processes=processes)
