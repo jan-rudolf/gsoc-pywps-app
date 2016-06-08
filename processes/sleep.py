@@ -3,8 +3,8 @@ from pywps import Process, LiteralInput, LiteralOutput
 
 class Sleep(Process):
     def __init__(self):
-        #inputs = [LiteralInput('delay', 'Delay between every update', data_type='integer')]
-        inputs = []
+        inputs = [LiteralInput('delay', 'Delay between every update', data_type='integer')]
+        #inputs = []
         outputs = [LiteralOutput('sleep_output', 'Sleep Output', data_type='string')]
 
         super(Sleep, self).__init__(
@@ -25,7 +25,7 @@ class Sleep(Process):
     def _handler(self, request, response):
         import time
 
-        #sleep_delay = request.inputs['delay'].data
+        sleep_delay = request.inputs['delay'][0].data
         sleep_delay = False
         if sleep_delay:
             sleep_delay = float(sleep_delay)
