@@ -9,11 +9,11 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../.
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
 
 #these to I want to delete
-from pywps.app import Service
+
 from pywps import configuration
 
 #this will remain
-from pywps.server.app import main
+from pywps.server.app.main import ServerConnection
 
 #this 2 are needed
 from processes.sleep import Sleep
@@ -25,5 +25,4 @@ configuration.load_configuration(os.path.join(os.path.dirname(os.path.abspath(__
 #needed/can delete
 processes = [Sleep(), Dummy()]
 
-#needed
-application = Service(processes=processes)
+application = ServerConnection(processes=processes).run()
