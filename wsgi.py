@@ -20,7 +20,7 @@ from processes.dummy import Dummy
 from processes.buffer import Buffer
 
 #this want to delete
-configuration.load_configuration(os.path.join(os.path.dirname(os.path.abspath(__file__)), "pywps2.cfg"))
+configuration.load_configuration(os.path.join(os.path.dirname(os.path.abspath(__file__)), "pywps.cfg"))
 
 #needed/can delete
 processes = [Sleep(), Dummy(), Buffer()]

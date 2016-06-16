@@ -8,7 +8,7 @@
     <wps:Input>
       <ows:Identifier>delay</ows:Identifier>
       <wps:Data>
-        <wps:LiteralData>1</wps:LiteralData>
+        <wps:LiteralData>2</wps:LiteralData>
       </wps:Data>
     </wps:Input>
 

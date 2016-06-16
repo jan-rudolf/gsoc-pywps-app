@@ -25,9 +25,9 @@ class Sleep(Process):
         import time
 
         sleep_delay = request.inputs['delay'][0].data
-        sleep_delay = False
+    
         if sleep_delay:
-            sleep_delay = float(sleep_delay)
+            sleep_delay = int(sleep_delay)*10
         else:
             sleep_delay = 10
 
