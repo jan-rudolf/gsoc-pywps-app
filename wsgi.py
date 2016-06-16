@@ -1,6 +1,5 @@
 #can be deleted
 import sys, os
-
 #this line could be deleted thanks to Apache config
 sys.stdout = sys.stderr
 #this 3 lines are needed because of develop mode of python package
@@ -18,11 +17,12 @@ from pywps.server.app.main import ServerConnection
 #this 2 are needed
 from processes.sleep import Sleep
 from processes.dummy import Dummy
+from processes.buffer import Buffer
 
 #this want to delete
 configuration.load_configuration(os.path.join(os.path.dirname(os.path.abspath(__file__)), "pywps2.cfg"))
 
 #needed/can delete
-processes = [Sleep(), Dummy()]
+processes = [Sleep(), Dummy(), Buffer()]
 
 application = ServerConnection(processes=processes).run()
