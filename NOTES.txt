@@ -1,0 +1,36 @@
+------------------
+Install PostgreSQL
+------------------
+
+1) install PostgreSQL - http://www.tunnelsup.com/setting-up-postgres-on-mac-osx
+
+------------------
+Create user "pywps_db_user" to PostgreSQL (in command line)
+------------------
+createuser pywps_db_user
+
+------------------
+Create database "pywps" (in command line)
+------------------
+createdb -O pywps_db_user pywps
+
+------------------
+Connect to database (in command line)
+------------------
+psql -U pywps_db_user -W pywps
+
+------------------
+Create table "pywps_requests" (in psql command line)
+------------------
+CREATE TABLE pywps_requests(
+                uuid VARCHAR(255) not null primary key,
+                pid INTEGER not null,
+                operation varchar(30) not null,
+                version varchar(5) not null,
+                time_start text not null,
+                time_end text,
+                identifier text,
+                message text,
+                percent_done float,
+                status varchar(30)
+            );

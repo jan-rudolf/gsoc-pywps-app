@@ -1,4 +1,6 @@
 import os
+
+###############
 #can be deleted
 import sys
 #this line could be deleted thanks to Apache config
@@ -7,11 +9,10 @@ sys.stdout = sys.stderr
 sys.path.insert(0, '/Users/janrudolf/Sites/gsoc-pywps-env/src/pywps/pywps/')
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
-
+###############
 
 from pywps.server.app.main import ServerConnection
 
-#this 2 are needed
 from processes.sleep import Sleep
 from processes.dummy import Dummy
 from processes.buffer import Buffer
