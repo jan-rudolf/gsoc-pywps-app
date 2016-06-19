@@ -23,14 +23,22 @@ psql -U pywps_db_user -W pywps
 Create table "pywps_requests" (in psql command line)
 ------------------
 CREATE TABLE pywps_requests(
-                uuid VARCHAR(255) not null primary key,
-                pid INTEGER not null,
-                operation varchar(30) not null,
-                version varchar(5) not null,
-                time_start text not null,
-                time_end text,
-                identifier text,
-                message text,
-                percent_done float,
-                status varchar(30)
-            );
+    uuid VARCHAR(255) not null primary key,
+    pid INTEGER not null,
+    operation varchar(30) not null,
+    version varchar(5) not null,
+    time_start text not null,
+    time_end text,
+    identifier text,
+    message text,
+    percent_done float,
+    status varchar(30)
+);
+
+------------------
+Create table "pywps_stored_requests"
+------------------
+CREATE TABLE pywps_stored_requests (uuid VARCHAR(255) NOT NULL PRIMARY KEY, request BYTEA NOT NULL);
+
+
+V pripade, ze se pokusim cist z DB tabulky nebo sloupce, ktery neexistuje - vrati se mi psycopg2.ProgrammingError exception
