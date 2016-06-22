@@ -1,3 +1,6 @@
+activate_this = '/var/www/gsoc-pywps-env/bin/activate_this.py'
+execfile(activate_this, dict(__file__=activate_this))
+
 import os
 
 ###############
@@ -6,9 +9,9 @@ import sys
 #this line could be deleted thanks to Apache config
 sys.stdout = sys.stderr
 #this 3 lines are needed because of develop mode of python package
-sys.path.insert(0, '/Users/janrudolf/Sites/gsoc-pywps-env/src/pywps/pywps/')
-sys.path.insert(0, '/Users/janrudolf/Sites/gsoc-pywps-env/src/pywps/pywps/server/app/')
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
+#sys.path.insert(0, '/Users/janrudolf/Sites/gsoc-pywps-env/src/pywps/pywps/')
+#sys.path.insert(0, '/Users/janrudolf/Sites/gsoc-pywps-env/src/pywps/pywps/server/app/')
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "./")))
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
 ###############
 
