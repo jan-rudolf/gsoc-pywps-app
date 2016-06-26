@@ -42,3 +42,8 @@ CREATE TABLE pywps_stored_requests (uuid VARCHAR(255) NOT NULL PRIMARY KEY, requ
 
 
 V pripade, ze se pokusim cist z DB tabulky nebo sloupce, ktery neexistuje - vrati se mi psycopg2.ProgrammingError exception
+
+
+sqlite:///relative/path/to/file.db
+sqlite:///:memory: (or, sqlite://)
+sqlite:////absolute/path/to/file.db
