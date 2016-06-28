@@ -11,7 +11,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "./")
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
 
 
-from pywps.server.wsgi import *
+from pywps.server.wsgi import application
 
 from processes.sleep import Sleep
 from processes.dummy import Dummy
