@@ -1,10 +1,11 @@
 #activation of Virtualenv's Python
-activate_this = '/var/www/gsoc-pywps-env/bin/activate_this.py'
+activate_this = '/Users/janrudolf/Sites/gsoc-pywps-env/bin/activate_this.py'
+#activate_this = '/var/www/gsoc-pywps-env/bin/activate_this.py'
 execfile(activate_this, dict(__file__=activate_this))
 
 import os
 
-#this 4 lines are needed only for develop installation
+#this 4 lines are needed only for the develop installation
 import sys
 sys.stdout = sys.stderr
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "./")))
