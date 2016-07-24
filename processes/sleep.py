@@ -23,6 +23,8 @@ class Sleep(Process):
     def _handler(self, request, response):
         import time
 
+        response.update_status('Process started. Waiting...', 0)
+
         sleep_delay = request.inputs['delay'][0].data
     
         if sleep_delay:
@@ -31,13 +33,13 @@ class Sleep(Process):
             sleep_delay = 10
 
         time.sleep(sleep_delay)
-        response.update_status('PyWPS Process started. Waiting...', 20)
+        response.update_status('Process running...', 20)
         time.sleep(sleep_delay)
-        response.update_status('PyWPS Process started. Waiting...', 40)
+        response.update_status('Process running...', 40)
         time.sleep(sleep_delay)
-        response.update_status('PyWPS Process started. Waiting...', 60)
+        response.update_status('Process running...', 60)
         time.sleep(sleep_delay)
-        response.update_status('PyWPS Process started. Waiting...', 80)
+        response.update_status('Process running...', 80)
         time.sleep(sleep_delay)
         response.outputs['sleep_output'].data = 'done sleeping'
 
