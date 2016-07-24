@@ -25,4 +25,9 @@ pywps_configuration_file = os.path.join(os.path.dirname(os.path.abspath(__file__
 pywps_processes = [Sleep(), Dummy(), Buffer()]
 
 
-application.load_pywps_app(pywps_processes, pywps_configuration_file)
+if __name__ == '__main__':
+	#run PyWPS as a demo application locally
+	application.run_pywps(processes=pywps_processes, configuration_file=pywps_configuration_file, run_locally=True)
+else:
+	#let be PyWPS served by a web server
+	application.run_pywps(processes=pywps_processes, configuration_file=pywps_configuration_file)
