@@ -1,6 +1,6 @@
 #activation of Virtualenv's Python
-#activate_this = '/Users/janrudolf/Sites/gsoc-pywps-env/bin/activate_this.py'
-activate_this = '/var/www/gsoc-pywps-env/bin/activate_this.py'
+activate_this = '/Users/janrudolf/Sites/gsoc-pywps-env/bin/activate_this.py'
+#activate_this = '/var/www/gsoc-pywps-env/bin/activate_this.py'
 execfile(activate_this, dict(__file__=activate_this))
 
 import os
